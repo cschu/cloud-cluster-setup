@@ -5,6 +5,7 @@ import csv
 
 # https://mechanize.readthedocs.io/en/latest/browser_api.html#the-browser
 
+# https://stackoverflow.com/questions/2311510/getting-a-machines-external-ip-address-with-python
 external_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
 url = "http://{ip}/hub/login".format(ip=external_ip)
 
