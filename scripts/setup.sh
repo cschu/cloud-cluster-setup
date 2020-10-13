@@ -20,6 +20,23 @@ limits:
 services:
   cull:
     enabled: false
+EOS
+
+# https://tljh.jupyter.org/en/latest/howto/auth/firstuse.html
+sudo tljh-config set auth.FirstUseAuthenticator.create_users true
+sudo tljh-config reload proxy
+sudo tljh-config reload hub
+
+sudo python3 $(dirname $0)/init_users.py saturn pwSWC2020
+
+while read -r i; do
+    USER="$(echo "$i" | cut -d, -f1)"
+    PASSWORD="$(echo "$i" | cut -d, -f2)"
+    sudo python3 $(dirname $0)/init_users.py $USER $PASSWORD
+    echo $USER $PASSWORD $(ls -d /vol/spool/*$USER)
+done < <(tail -n+2 $(dirname $0)/../data/users)
+
+sudo cat << EOS >> /opt/tljh/config/config.yaml
 https:
   enabled: true
   letsencrypt:
@@ -33,20 +50,6 @@ https_domain=$2
 
 sudo sed -i "s/XXEMAILXX/$https_email/" /opt/tljh/config/config.yaml
 sudo sed -i "s/XXDOMAINXX/$https_domain/" /opt/tljh/config/config.yaml
-
-# https://tljh.jupyter.org/en/latest/howto/auth/firstuse.html
-sudo tljh-config set auth.FirstUseAuthenticator.create_users true
-sudo tljh-config reload proxy
-sudo tljh-config reload hub
-
-python3 /home/ubuntu/cloud-clusters/scripts/init_users.py saturn pwSWC2020
-
-while read -r i; do
-    USER="$(echo "$i" | cut -d, -f1)"
-    PASSWORD="$(echo "$i" | cut -d, -f2)"
-    python3 $(dirname $0)/init_users.py $USER $PASSWORD
-    echo $USER $PASSWORD $(ls -d /vol/spool/*$USER)
-done < <(tail -n+2 $(dirname $0)/../data/users)
 
 sudo tljh-config set auth.FirstUseAuthenticator.create_users false 
 sudo tljh-config reload proxy
