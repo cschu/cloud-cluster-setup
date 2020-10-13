@@ -36,6 +36,9 @@ while read -r i; do
     echo $USER $PASSWORD $(ls -d /vol/spool/*$USER)
 done < <(tail -n+2 $(dirname $0)/../data/users)
 
+sudo tljh-config add-item users.admin swc31
+sudo tljh-config add-item users.admin swc34
+
 sudo cat << EOS >> /opt/tljh/config/config.yaml
 https:
   enabled: true
