@@ -36,6 +36,8 @@ while read -r i; do
     echo $USER $PASSWORD $(ls -d /vol/spool/*$USER)
 done < <(tail -n+2 $(dirname $0)/../data/users)
 
+# https://tljh.jupyter.org/en/latest/howto/admin/admin-users.html
+# TODO: this might be doable before users are added, which would prevent locking them out of sudo while they're logged in
 sudo tljh-config add-item users.admin swc31
 sudo tljh-config add-item users.admin swc34
 
