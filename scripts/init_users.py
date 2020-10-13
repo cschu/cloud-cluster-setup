@@ -3,6 +3,8 @@ import sys
 import urllib.request
 import csv
 
+# https://mechanize.readthedocs.io/en/latest/browser_api.html#the-browser
+
 external_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
 url = "http://{ip}/hub/login".format(ip=external_ip)
 
