@@ -16,7 +16,7 @@ user_environment:
   default_app: jupyterlab
 limits:
   cpu: 1
-  memory: 4G
+  memory: 2G
 services:
   cull:
     enabled: false
