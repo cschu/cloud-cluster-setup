@@ -1,6 +1,18 @@
 # cloud-cluster-setup
 
+These are some workflows to set up a training cluster in the de.NBI cloud. 
+
+The main features are:
+
+- a slurm cluster built by BiBiGrid (https://github.com/BiBiServ/bibigrid/blob/master/docs/CONFIGURATION_SCHEMA.md)
+- enabled slurm accounting (`sacct`) to demonstrate job/resource monitoring
+- users logging into the system via tljh (https://readthedocs.org/projects/the-littlest-jupyterhub/downloads/pdf/latest/), providing a JupyterLab interface with access to the slurm cluster
+
+## How to run this?
+
 **Do not use the `full_setup.sh`, it's not working currently.**
+
+After BiBiGrid finishes setting up the instances and the slurm installation, log into your head node.
 
 ```
 git clone https://github.com/cschu/cloud-cluster-setup.git
