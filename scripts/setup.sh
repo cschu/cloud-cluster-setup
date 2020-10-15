@@ -29,12 +29,26 @@ sudo tljh-config reload hub
 
 sudo python3 $(dirname $0)/init_users.py saturn pwSWC2020
 
+wget http://swcarpentry.github.io/shell-novice/data/data-shell.zip
+unzip data-shell.zip
+
 while read -r i; do
     USER="$(echo "$i" | cut -d, -f1)"
     PASSWORD="$(echo "$i" | cut -d, -f2)"
+    JUHOME=/vol/spool/jupyter-$USER
+
     sudo python3 $(dirname $0)/init_users.py $USER $PASSWORD
-    echo $USER $PASSWORD $(ls -d /vol/spool/*$USER)
+
+    sudo touch $JUHOME/.bashrc
+    sudo echo "PS1='$ '" >> $JUHOME/.bashrc
+    sudo cp data-shell $JUHOME/
+    sudo chown -R $USER:$USER $JUHOME
+
+    echo $USER $PASSWORD $(ls -d $JUHOME)
 done < <(tail -n+2 $(dirname $0)/../data/users)
+
+rm -rf data-shell data-shell.zip
+
 
 sudo tljh-config add-item users.admin swc31
 sudo tljh-config add-item users.admin swc34
