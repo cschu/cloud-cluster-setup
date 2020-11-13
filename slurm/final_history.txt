@@ -1,0 +1,676 @@
+    1  exit
+    2  git clone https://github.com/cschu/cloud-cluster-setup.git
+    3  sudo bash cloud-cluster-setup/scripts/setup_sacct.sh 
+    4  cd /vol/spool/
+    5  sbatch --array 1-20 --wrap "echo xxxx; sleep 5;"
+    6  squeue
+    7  sacct -j 2_13
+    8  squeue
+    9  cd -
+   10  sudo bash ~/cloud-cluster-setup/scripts/setup.sh itsops@embl.de swcarpentry.embl.de
+   11  sudo apt-get install -y python3-numpy python3-pandas python3-matplotlib
+   12  python3
+   13  sudo vi /etc/profile
+   14  sudo vi /etc/bash.bashrc 
+   15  cd /vol/spool/
+   16  ls
+   17  wget http://swcarpentry.github.io/shell-novice/data/data-shell.zip
+   18  ls
+   19  unzip data-shell.zip 
+   20  ls
+   21  rm slurm-2_*
+   22  ls
+   23  mkdir swc_shell_data
+   24  mv data-shell.zip swc_shell_data/
+   25  ls -l
+   26  history | grep chmod
+   27  ls -l swc_python_data/
+   28  id jupyter-swc34
+   29  clear
+   30  ls -l
+   31  cp -r data-shell jupyter-swc34/
+   32  sudo cp -r data-shell jupyter-swc34/
+   33  chown -h
+   34  chown --help
+   35  sudo cp -r data-shell jupyter-swc34/"
+   36  sudo chown -R jupyter-swc34:jupyter-swc34 jupyter-swc34/data-shell
+   37  ls
+   38  sudo rm -rf jupyter-s34/data-shell
+   39  for u in jupyter-s*; do sudo cp -r data-shell $u/
+   40  for u in jupyter-s*; do echo $u; sudo cp -r data-shell $u/; sudo chown -R $u:$u $u/data-shell
+   41  for u in jupyter-swc34; do echo $u; sudo cp -r data-shell $u/; sudo chown -R $u:$u $u/data-shell; done
+   42  sudo rm -rf jupyter-s34/data-shell
+   43  for u in jupyter-swc*; do echo $u; sudo cp -r data-shell $u/; sudo chown -R $u:$u $u/data-shell; done
+   44  sudo ls jupyter-s*/.bashrc
+   45  vi ~/.bashrc 
+   46  history | grep etc
+   47  sudo vi /etc/bash.bashrc 
+   48  for i in jupyter-* ; do sudo echo "PS1='$ '" >> $i/.bashrc  ; done
+   49  sudo su -
+   50  clear
+   51  cd 
+   52  ls 
+   53  cd cloud-cluster-setup/
+   54  vi scripts/setup.sh 
+   55  git status
+   56  git commit -am "reduced shell-prompy complexity; added population of user homes with course data"
+   57  git push origin master
+   58  git pull origin master
+   59  vi scripts/setup.sh 
+   60  git status
+   61  git commit -am "merged upstream"
+   62  git push origin master
+   63  squeue
+   64  exit
+   65  echo $PATH
+   66  exit
+   67  ls
+   68  vim countAtoms.py 
+   69  sudo -i
+   70  l
+   71  sudo -i
+   72  sudo su - jupyter-swc34
+   73  echo $PATH
+   74  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+   75  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+   76  man srun
+   77  sudo vi /etc/slurm-llnl/cgroup.conf 
+   78  sudo systemctl status slurmd
+   79  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+   80  sbatch --version
+   81  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+   82  which srun
+   83  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+   84  ssh bibigrid-worker-2-2-e5kpwvuhqxscjba
+   85  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+   86  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+   87  sudo vi /etc/slurm-llnl/slurm.conf 
+   88  sbatch --mem 8G --wrap "echo xxxx; sleep 5;"
+   89  squeue
+   90  ls -ltr
+   91  cd 
+   92  sacct -j 89 --format Node
+   93  sudo su - jupyter-swc34
+   94  sacct -j 88 --format ReqMem
+   95  wget -h
+   96  sudo vi /etc/slurm-llnl/slurm.conf 
+   97  history | grep sbatch
+   98  sbatch --mem 16G --wrap "echo xxxx; sleep 5;"
+   99  sbatch --mem 16GB --wrap "echo xxxx; sleep 5;"
+  100  man sbatch
+  101  sudo vi /etc/slurm-llnl/slurm.conf 
+  102  history
+  103  sbatch --mem 16334 --wrap "echo xxx; sleep 5;"
+  104  sbatch --mem 8192 --wrap "echo xxx; sleep 5;"
+  105  sbatch -c 4 --mem 16334 --wrap "echo xxx; sleep 5;"
+  106  sbatch -c 8 --mem 16334 --wrap "echo xxx; sleep 5;"
+  107  sbatch -c 8 --mem 16384 --wrap "echo xxx; sleep 5;"
+  108  sinfo
+  109  sbatch -c 8 --mem 12000 --wrap "echo xxx; sleep 5;"
+  110  sudo -i
+  111  htop
+  112  sudo vi /etc/slurm-llnl/slurm.conf 
+  113  htop
+  114  cd /vol/spool/
+  115  ls
+  116  ls jupyter-s*
+  117  sudo ls jupyter-s*
+  118  sudo ls jupyter-s*/*ython*
+  119  sudo ls jupyter-s*/Python*
+  120  ls
+  121  sudo ls jupyter-s*
+  122  sudo ls jupyter-s*/Python-Day-1
+  123  sudo ls jupyter-swc33/Python-Day-1
+  124  sudo ls jupyter-swc06/
+  125  sudo ls jupyter-swc06/'Python Day-1'
+  126  htop
+  127  sudo ls jupyter-swc18
+  128  sudo ls jupyter-swc18/Python1
+  129  sudo ls jupyter-swc18/Python-1
+  130  htop
+  131  sudo ls jupyter-swc18/Python-1
+  132  htop
+  133  squeue
+  134  htop
+  135  cleaer
+  136  clear
+  137  history | grep vi
+  138  sudo vi /etc/slurm-llnl/slurm.conf 
+  139  scontrol reconfigure --help
+  140  man reconfigure
+  141  man scontrol
+  142  sudo scontrol reconfigure
+  143  sinfo
+  144  sudo vi /etc/slurm-llnl/slurm.conf 
+  145  sudo scontrol reconfigure
+  146  sinfo
+  147  sbatch --array 1-20 --wrap "echo xxx; sleep 5;"
+  148  squeue
+  149  sacct -j 126_1
+  150  htop
+  151  sudo vi /etc/slurm-llnl/slurm.conf 
+  152  sudo scontrol reconfigure
+  153  sbatch --array 1-20 --wrap "echo xxx; sleep 5;"
+  154  squeue
+  155  sudo vi /etc/slurm-llnl/slurm.conf 
+  156  sudo cp /etc/slurm-llnl/slurm.conf /vol/spool/jupyter-saturn/
+  157  sudo cp /etc/slurm-llnl/slurm.conf /vol/spool/jupyter-swc34/
+  158  htop
+  159  history | grep systemctl
+  160  sudo systemctl status slurmd.service slurmctld.service 
+  161  sudo systemctl restart slurmd.service slurmctld.service 
+  162  sbatch --array 1-20 --wrap "echo xxx; sleep 5;"
+  163  squeue
+  164  sacct -j 176_12
+  165  sudo vi /etc/slurm-llnl/slurm.conf 
+  166  sudo systemctl restart slurmd.service slurmctld.service slurmdbd.service 
+  167  sudo systemctl status slurmd.service slurmctld.service slurmdbd.service 
+  168  sbatch --array 1-20 --wrap "echo xxx; sleep 5;"
+  169  sacct -j 176_12 196_1
+  170  sacct -j 196_1
+  171  sudo scontrol reconfigure
+  172  htop
+  173  ls -ltr /var/log/slurm-llnl/
+  174  less  /var/log/slurm-llnl/slurmctld.log
+  175  sudo less  /var/log/slurm-llnl/slurmctld.log
+  176  sudo less /var/log/slurm-llnl/slurmd.log
+  177  sudo less /var/log/slurm-llnl/slurmdbf.log
+  178  sudo less /var/log/slurm-llnl/slurmdbd.log
+  179  history | grep ssh
+  180  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  181  sudo scp /etc/slurm-llnl/slurm.conf bibigrid-worker-3-1-e5kpwvuhqxscjba:/etc/slurm-llnl/slurm.conf
+  182  sudo --help
+  183  sudo -E scp /etc/slurm-llnl/slurm.conf bibigrid-worker-3-1-e5kpwvuhqxscjba:/etc/slurm-llnl/slurm.conf
+  184  pwd
+  185  cp /etc/slurm-llnl/slurm.conf .
+  186  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  187  mkdir /vol/spool/.share
+  188  cp /etc/slurm-llnl/slurm.conf /vol/spool/.share/
+  189  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  190  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+  191  ssh bibigrid-worker-1-2-e5kpwvuhqxscjba
+  192  ssh bibigrid-worker-2-2-e5kpwvuhqxscjba
+  193  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+  194  scontrol reconfigure
+  195  sudo scontrol reconfigure
+  196  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+  197  sbatch --array 1-20 --wrap "echo xxx; sleep 5;"
+  198  squeue
+  199  sudo vi /etc/slurm-llnl/cgroup.conf 
+  200  sudo ls -l /etc/slurm-llnl/cgroup.conf 
+  201  sudo vi /etc/slurm-llnl/cgroup.conf 
+  202  sacct -j 219_7 --format MaxRSS
+  203  man sacct
+  204  sudo vi /etc/default/grub
+  205  htop
+  206  sudo ls -l /etc/slurm-llnl/
+  207  sudo vi /etc/slurm-llnl/cgroup.conf 
+  208  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+  209  ls -ltr
+  210  sudo vi /etc/slurm-llnl/slurm.conf 
+  211  history | grep sudo
+  212  sudo systemctl restart slurmd.service slurmdbd.service slurmctld.service 
+  213  sudo systemctl status slurmd.service slurmdbd.service slurmctld.service 
+  214  sudo cp  /vol/spool/jupyter-swc30/embl_hpc/swc/exercises/batch_job.sh .
+  215  vi batch_job.sh 
+  216  sudo cp  /vol/spool/jupyter-swc30/embl_hpc/swc/exercises/hpc_example .
+  217  ls 
+  218  ls hpc_example 
+  219  vi hpc_example 
+  220  sbatch --mem 10 batch_job.sh 
+  221  squeue
+  222  cd /vol/spool/
+  223  mkdir test
+  224  cd test/
+  225  cp ~/batch_job.sh .
+  226  cp ~/hpc_example .
+  227  sbatch --mem 10 batch_job.sh 
+  228  squeue
+  229  sacct -j 251 --format MaxRSS,ReqMEM,Elapsed,State
+  230  watch sacct -j 251 --format MaxRSS,ReqMEM,Elapsed,State
+  231  history | grep sudo
+  232  sudo vi /etc/slurm-llnl/slurm.conf 
+  233  sudo systemctl status slurmd.service slurmdbd.service slurmctld.service 
+  234  sudo systemctl restart slurmd.service slurmdbd.service slurmctld.service 
+  235  sudo systemctl status slurmd.service slurmdbd.service slurmctld.service 
+  236  sbatch --mem 10 batch_job.sh 
+  237  squeue
+  238  watch sacct -j 252 --format MaxRSS,ReqMEM,Elapsed,State
+  239  ls -ltr
+  240  cat slurm-252.out
+  241  sacct -j 252 --format MaxRSS,ReqMEM,Elapsed,State
+  242  sudo cp /etc/slurm-llnl/slurm.conf .
+  243  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  244  sbatch --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  245  squeue
+  246  sacct -j 252 --format MaxRSS,ReqMEM,Elapsed,State
+  247  watch sacct -j 253 --format MaxRSS,ReqMEM,Elapsed,State
+  248  ls -ltr
+  249  cat slurm-253.out
+  250  sudo vi /etc/slurm-llnl/slurmdbd.conf 
+  251  squeue
+  252  htop
+  253  sudo -i
+  254  passwd
+  255  sudo -i
+  256  id
+  257  ls /vol/spool/
+  258  vi /vol/spool/script.py 
+  259  ls -l /vol/spool/script.py 
+  260  ls
+  261  cd /vol/spool/
+  262  ls
+  263  ls -ltr
+  264  sudo vi /etc/default/grub
+  265  ls
+  266  sudo tar cvzf backup_20201021.tar.gz .
+  267  ls -ltr
+  268  sudo rm backup_20201021.tar.gz 
+  269  sudo tar cvzf ~/backup_20201021.tar.gz .
+  270  tar tzf ~/backup_20201021.tar.gz | less
+  271  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  272  sudo vi /etc/default/grub
+  273  sudo update-grub
+  274  pwd
+  275  cd 
+  276  pwd
+  277  md5sum backup_20201021.tar.gz 
+  278  histoty | grep sbatch
+  279  history | grep sbatch
+  280  cd /vol/spool/
+  281  ls -ltr
+  282  cd test/
+  283  history | grep sbatch
+  284  sbatch --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  285  squeue
+  286  watch squeue
+  287  ls -ltr
+  288  cat slurm-265.out
+  289  sudo update-grub
+  290  sudo reboot
+  291  man sbatch
+  292  cd /vol/spool/test/
+  293  sbatch --mem-per-cpu 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  294  squeue
+  295  ls -ltr
+  296  squeue
+  297  ls -ltr
+  298  squeue
+  299  ls -ltr
+  300  exit
+  301  sudo -i
+  302  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+  303  htop
+  304  tmux
+  305  sudo -i
+  306  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+  307  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  308  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+  309  ssh bibigrid-worker-2-2-e5kpwvuhqxscjba
+  310  sudo -i
+  311  ls
+  312  start_tmux.sh
+  313  vim start_tmux.sh
+  314  chmod +x start_tmux.sh 
+  315  ./start_tmux.sh 
+  316  sudo less /var/log/slurm-llnl/slurmdbd.log 
+  317  sudo ls -ltr /var/log/slurm-llnl/
+  318  sudo less /var/log/slurmctld.log
+  319  sudo less /var/log/slurm-llnl/slurmctld.log
+  320  sudo systemctl status mysql
+  321  sacct
+  322  clear
+  323  sacct
+  324  sacct --format JobId,MaxRSS
+  325  sudo ls /run/slurmdbd/slurmdbd.pid
+  326  sudo ls /run/slurmdbd/
+  327  sudo ls /run
+  328  cd /vol/spool/test/
+  329  sbatch --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  330  squeue
+  331  watch squeue
+  332  ls -ltr
+  333  sacct -j 252 --format MaxRSS,ReqMEM,Elapsed,State
+  334  ls -ltr /var/log/slurm-llnl/
+  335  sudo less /var/log/slurm-llnl/slurmdbd.log 
+  336  sudo systemctl status slurmdbd.service 
+  337  sudo systemctl restart slurmdbd.service 
+  338  sudo systemctl status slurmdbd.service
+  339  sudo vi /etc/slurm-llnl/slurmdbd.conf 
+  340  sudo vi /etc/slurm-llnl/slurm.conf 
+  341  sudo vi /etc/slurm-llnl/cgroup.conf 
+  342  ls /sys/fs/cgroup
+  343  ls /sys/fs/cgroup/memory/
+  344  sudo slurmdbd -Dvvv
+  345  sudo -h
+  346  sudo -u slurm slurmdbd -Dvvv
+  347  sudo systemctl status slurmdbd.service
+  348  sudo systemctl start slurmdbd.service
+  349  sudo journalctl -xe
+  350  sudo ls -ltr /var/log
+  351  sudo ls -ltr /var/log/syslog
+  352  sudo less  /var/log/syslog
+  353  sudo grep -v upy  /var/log/syslog  | less
+  354  sudo grep -v upy  /var/log/syslog  | grep -v SingleUser | less
+  355  sudo ls -ltr /var/log
+  356  sudo ls -ltr /var/log/slurm-llnl/
+  357  sudo less /var/log/slurm-llnl/slurmdbd.log 
+  358  sudo systemctl status slurm*
+  359  sudo systemctl status slurmdbd.service 
+  360  sudo systemctl restart slurmdbd.service 
+  361  sudo vi /etc/slurm-llnl/slurmdbd.conf 
+  362  sudo mkdir /run/slurmdbd
+  363  sudo chown slurm:slurm /run/slurmdbd
+  364  sudo systemctl status slurmdbd.service 
+  365  sudo systemctl restart slurmdbd.service 
+  366  sudo systemctl status slurmdbd.service 
+  367  sacct
+  368  sbatch --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  369  squeue
+  370  watch squeue
+  371  ls -ltr
+  372  sacct -o JobId,MaxRSS
+  373  htpo
+  374  htop
+  375  sudo vi /etc/default/grub
+  376  vi /boot/grub/grub.cfg 
+  377  sudo chown slurm:slurm /etc/slurm-llnl/cgroup.conf 
+  378  sudo chown slurm:slurm /etc/slurm-llnl/slurm.conf 
+  379  sudo systemctl restart slurmd.service slurmctld.service slurmdbd.service 
+  380  sbatch --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  381  squeue
+  382  1sq
+  383  squeue
+  384  sinfo
+  385  squeue
+  386  sinfo
+  387  squeue
+  388  ls -ltr
+  389  squeue
+  390  ls -ltr
+  391  squeue
+  392  ls -ltr
+  393  cat slurm-268.out
+  394  sudo vi /etc/slurm-llnl/slurm.conf 
+  395  sbatch --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  396  squeue
+  397  scontrol show job 269
+  398  squeue
+  399  ls -ltr
+  400  pwd
+  401  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  402  vim start_tmux.sh 
+  403  tmux new-session -d
+  404  tmux a
+  405  vim start_tmux.sh 
+  406  ./start_tmux.sh 
+  407  vim start_tmux.sh 
+  408  ./start_tmux.sh 
+  409  vim start_tmux.sh 
+  410  ./start_tmux.sh 
+  411  vim start_tmux.sh 
+  412  ./start_tmux.sh 
+  413  vim start_tmux.sh 
+  414  ./start_tmux.sh 
+  415  vim start_tmux.sh 
+  416  ./start_tmux.sh 
+  417  vim start_tmux.sh 
+  418  ./start_tmux.sh 
+  419  vim start_tmux.sh 
+  420  ./start_tmux.sh 
+  421  vim start_tmux.sh 
+  422  ./start_tmux.sh 
+  423  vim start_tmux.sh 
+  424  ./start_tmux.sh 
+  425  vim start_tmux.sh 
+  426  ./start_tmux.sh 
+  427  vim start_tmux.sh 
+  428  ./start_tmux.sh 
+  429  ls
+  430  ls -l
+  431  vi start_tmux.sh 
+  432  ./start_tmux.sh 
+  433  l
+  434  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  435  exit
+  436  cd /vol/spool/test/
+  437  ls -ltr
+  438  cat slurm-272.out
+  439  scontrol show job 272
+  440  sacct -j 272
+  441  sudo vi /etc/slurm-llnl/slurm.conf 
+  442  ls -l /etc/slurm-llnl/slurm.conf
+  443  sudo less /etc/slurm-llnl/cgroup.conf 
+  444  sudo less /etc/slurm-llnl/cgroup_allowed_devices_file.conf 
+  445  sudo less /etc/slurm-llnl/cgroup.conf 
+  446  sbatch -t 00:05:00 --mem-per-cpu 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  447  squeue
+  448  scontrol show job 273
+  449  squeue
+  450  sacct -j 273
+  451  sacct -j 273 -o MaxRSS
+  452  sudo vi /etc/slurm-llnl/slurm.conf 
+  453  sudo vi /etc/slurm-llnl/cgroup.conf 
+  454  sudo vi /etc/slurm-llnl/slurm.conf 
+  455  sudo systemctl restart slurmd.service slurmctld.service slurmdbd.service 
+  456  sudo systemctl status slurmd.service 
+  457  sudo vi /etc/slurm-llnl/slurm.conf 
+  458  sudo systemctl restart slurmd.service slurmctld.service slurmdbd.service 
+  459  sudo systemctl status slurmd.service 
+  460  sbatch -t 00:05:00 --mem-per-cpu 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  461  squeue
+  462  ls -ltr
+  463  squeue
+  464  ls -ltr
+  465  squeue
+  466  ls -ltr
+  467  squeue
+  468  watch squeue
+  469  ls -ltr
+  470  cat slurm-274.out
+  471  cp /etc/slurm-llnl/slurm.conf /vol/spool/test/
+  472  sudo cp /etc/slurm-llnl/slurm.conf /vol/spool/test/
+  473  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  474  sbatch -t 00:05:00 --mem-per-cpu 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  475  squeue
+  476  watch squeue
+  477  ls -ltr
+  478  cat slurm-275.out
+  479  sbatch --array 1-20 --wrap "echo xxxx; sleep 5"
+  480  squeue
+  481  sacct -j 276
+  482  sacct -j 276 --format MaxRSS
+  483  cat slurm-275.out
+  484  sudo cp /vol/spool/test/slurm.conf /etc/slurm-llnl/ "
+  485  sacct -j 296 -o MaxRSS
+  486  cat slurm-275.out
+  487  sacct -j 275 -o MaxRSS
+  488  sacct -j 275 -o MaxRSS,MaxVMSize
+  489  sbatch -t 00:05:00 --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh 
+  490  squeue
+  491  ls -ltr
+  492  cat slurm-297.out
+  493  ls
+  494  vi bad.py
+  495  python
+  496  python3
+  497  vi bad.py
+  498  python3
+  499  vi bad.py
+  500  python3
+  501  vi bad.py
+  502  vi batch_job.sh 
+  503  sbatch -t 00:05:00 --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh "
+  504  vi batch_job.sh 
+  505  vi bad.py 
+  506  sbatch -t 00:05:00 --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh "
+  507  sbatch -t 00:05:00 --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh
+  508  squeue
+  509  watch squeue
+  510  ls -ltr
+  511  cat slurm-303.out
+  512  vi bad.py 
+  513  sbatch -t 00:05:00 --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba batch_job.sh
+  514  watch squeue
+  515  ls -ltr
+  516  sacct -j 304 --format MaxRSS
+  517  cat slurm-304.out 
+  518  vi bad.py 
+  519  ssh bibigrid-worker-3-1-e5kpwvuhqxscjba
+  520  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+  521  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+  522  ssh bibigrid-worker-2-2-e5kpwvuhqxscjba
+  523  squeue
+  524  sinfo
+  525  cd /vol/spool/test/
+  526  history   | grep sbatch
+  527  sbatch --mem 10 -x bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba,bibigrid-worker-3-1-e5kpwvuhqxscjba batch_job.sh 
+  528  squeue
+  529  watch squeue
+  530  ls -ltr
+  531  cat slurm-307.out
+  532  sacct -j 307 --format MaxRSS
+  533  sbatch --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-2-e5kpwvuhqxscjba,bibigrid-worker-3-1-e5kpwvuhqxscjba batch_job.sh 
+  534  squeue
+  535  ls -ltr
+  536  cat slurm-308.out
+  537  sbatch --mem 10 -x bibigrid-worker-1-1-e5kpwvuhqxscjba,bibigrid-worker-2-1-e5kpwvuhqxscjba,bibigrid-worker-3-1-e5kpwvuhqxscjba batch_job.sh 
+  538  squeue
+  539  ls -ltr
+  540  history
+  541  ssh bibigrid-worker-2-2-e5kpwvuhqxscjba
+  542  sudo vi /etc/ssh/sshd_config
+  543  id jupyter-swc18
+  544  sudo vi /etc/ssh/sshd_config
+  545  id jupyter-swc19
+  546  sudo vi /etc/ssh/sshd_config
+  547  sudo getent jupyterhub-users
+  548  sudo vi /etc/ssh/sshd_config
+  549  sudo systemctl restart ssh
+  550  sudo vi /etc/ssh/sshd_config
+  551  sudo systemctl restart ssh
+  552  sudo vi /etc/ssh/sshd_config
+  553  sudo systemctl restart ssh
+  554  pwd
+  555  vi 2020-10-19-swcusers.csv 
+  556  ls /vol/spool/
+  557  head 2020-10-19-swcusers.csv 
+  558  cut -f 1,2 -d , 2020-10-19-swcusers.csv | tail -n +2 | tr "," "\t" > users.txt
+  559  vi users.txt 
+  560  while read -r i; do user=$(echo $i | cut -f 1); pw=$(echo $i | cut -f 2); echo $user $pw; done < users.txt 
+  561  while read -r i; do user=$(echo $i | cut -f 1); pw=$(echo $i | cut -f 2); echo $user XXX $pw; done < users.txt 
+  562  vi users.txt 
+  563  cut -f 1,2 -d , 2020-10-19-swcusers.csv | tail -n +2 > users.txt
+  564  while read -r i; do user=$(echo $i | cut -f 1 -d ,); pw=$(echo $i | cut -f 2 -d ,); echo $user XXX $pw; done < users.txt 
+  565  ls /vol/spool/
+  566  vi add_users.sh
+  567  bash add_users.sh 
+  568  tail -n1 users.txt > users.txt2
+  569  vi add_users.sh
+  570  bash add_users.sh users.txt2
+  571  vi add_users.sh
+  572  bash add_users.sh users.txt2
+  573  vi add_users.sh
+  574  bash add_users.sh users.txt2
+  575  vi add_users.sh
+  576  sudo bash add_users.sh users.txt2
+  577  vi add_users.sh
+  578  sudo bash add_users.sh users.txt
+  579  htop
+  580  w
+  581  sudo w
+  582  w
+  583  sudo ls /vol/spool/jupyter-swc18
+  584  sudo ls /vol/spool/jupyter-swc09
+  585  sudo ls /vol/spool/jupyter-swc09/Ezebuo_embl
+  586  ls
+  587  sudo ls /vol/spool/jupyter-swc09/Ezebuo_embl
+  588  squeue
+  589  w
+  590  ls
+  591  vi start_tmux.sh 
+  592  ./start_tmux.sh 
+  593  :kill-session
+  594  squeue
+  595  watch squeue
+  596  htop
+  597  watch squeue
+  598  htop
+  599  cd /vol/spool/
+  600  ls
+  601  vi script.py 
+  602  ls -l script.py 
+  603  sudo ls jupyter-swc02/
+  604  vi script.py 
+  605  sudo ls jupyter-swc02/ -a
+  606  ls -ld data-shell/
+  607  history | grep ssh
+  608  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+  609  ls
+  610  ./start_tmux.sh 
+  611  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+  612  ssh bibigrid-worker-2-1-e5kpwvuhqxscjba
+  613  ssh bibigrid-worker-1-1-e5kpwvuhqxscjba
+  614  history | grep tmux
+  615  tmux a
+  616  ls
+  617  rm backup_20201021.tar.gz 
+  618  cd /vol/spool/
+  619  ls
+  620  sudo ls jupyter-swc02/
+  621  sudo mv script.py jupyer-swc02/
+  622  sudo mv script.py jupyter-swc02/
+  623  sudo ls -l jupyter-swc02
+  624  for d in jupyter-sw*; do
+  625  mkdir ~/final_backup
+  626  for d in jupyter-sw*; do sudo tar cvzf ~/final_backup/$d.backup.tar.gz $d; done
+  627  ls -l ~/final_backup/
+  628  ls -lh ~/final_backup/
+  629  htop
+  630  ls final_backup/
+  631  sudo -i
+  632  ./start_tmux.sh 
+  633  ls
+  634  ifconfig
+  635  if link
+  636  ip link
+  637  ip net
+  638  ip 
+  639  ip addr
+  640  ssh jupyter-swc31192.168.0.250
+  641  ssh jupyter-swc31@192.168.0.250
+  642  sudo -i
+  643  ls
+  644  ./start_tmux.sh 
+  645  tmux a
+  646  sudo -i
+  647  exit
+  648  ls -ltr /vol/spool/
+  649  ls -ltr /vol/spool/jupyter-swc34
+  650  sudo ls -ltr /vol/spool/jupyter-swc34
+  651  sudo ls -ltr /vol/spool/jupyter-swc34/
+  652  sudo ls -ltr /vol/spool/jupyter-swc34/embl_hpc
+  653  history 
+  654  ls
+  655  head users.txt*
+  656  head 2020-10-19-swcusers.csv 
+  657  less 2020-10-19-swcusers.csv 
+  658  ls -ltr
+  659  vi add_users.sh 
+  660  tail users.txt
+  661  wc -l users.txt*
+  662  vi batch_job.sh 
+  663  vi start_tmux.sh 
+  664  ls
+  665  ls cloud-cluster-setup/
+  666  ls cloud-cluster-setup/scripts/
+  667  cp add_users.sh cloud-cluster-setup/scripts/
+  668  mc add_users.sh cloud-cluster-setup/scripts/
+  669  mv add_users.sh cloud-cluster-setup/scripts/
+  670  cat slurm.conf 
+  671  ls 
+  672  mv start_tmux.sh cloud-cluster-setup/scripts/
+  673  ls /vol/spool/
+  674  ls cloud-cluster-setup/
+  675  history | less
+  676  history > cloud-cluster-setup/data/final_history.txt
