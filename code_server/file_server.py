@@ -42,6 +42,7 @@ EXTENSIONS_TO_SHOW = (
     ".json",
     ".nf",
     ".py",
+    ".sh",
 )
 
 
