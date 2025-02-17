@@ -1,0 +1,632 @@
+    1  git clone https://github.com/cschu/cloud-cluster-setup.git
+    2  cd cloud-cluster-setup/
+    3  ls
+    4  git checkout -b swc2025
+    5  cd ..
+    6  java -version
+    7  sudo apt install openjdk-19-jre-headless -h
+    8  sudo apt install -h
+    9  sudo apt install -y openjdk-19-jre-headless
+   10  vi cloud-cluster-setup/scripts/setup_swc2025.sh
+   11  vi /etc/needrestart/needrestart.conf
+   12  vi cloud-cluster-setup/scripts/setup_swc2025.sh
+   13  curl -s https://get.nextflow.io | bash
+   14  sudo mv nextflow /usr/local/bin
+   15  nextflow -version
+   16  vi cloud-cluster-setup/scripts/setup_swc2025.sh
+   17  sinfo
+   18  sudo pip install numpy
+   19  vi cloud-cluster-setup/scripts/setup_swc2025.sh
+   20  echo -e "alias python='python3'"
+   21  sudo echo -e "alias python='python3'" >> /etc/profile.d/00-aliases.sh
+   22  sudo 'echo -e "alias python='python3'" >> /etc/profile.d/00-aliases.sh'
+   23  sudo sh -c "echo -e alias python='python3' >> /etc/profile.d/00-aliases.sh"
+   24  cat /etc/profile.d/00-aliases.sh
+   25  sudo rm /etc/profile.d/00-aliases.sh
+   26  sudo sh -c 'echo -e "alias python=\'python3\'" >> /etc/profile.d/00-aliases.sh'
+   27  vi cloud-cluster-setup/scripts/full_setup.sh 
+   28  tail -n 20 cloud-cluster-setup/scripts/full_setup.sh 
+   29  sudo echo -e << EOS >> /etc/profile.d/00-aliases.sh
+   30  alias python='python3'
+   31  EOS
+   32  sudo \(echo -e << EOS >> /etc/profile.d/00-aliases.sh
+   33  alias python='python3'
+   34  EOS\)
+   35  sudo \(echo -e << EOS >> /etc/profile.d/00-aliases.sh
+   36  alias python='python3'
+   37  EOS
+   38  sudo (echo -e << EOS >> /etc/profile.d/00-aliases.sh
+   39  alias python='python3'
+   40  EOS
+   41  )
+   42  sudo \(echo -e << EOS >> /etc/profile.d/00-aliases.sh
+   43  alias python='python3'
+   44  EOS
+   45  sudo \(echo -e << EOS >> /etc/profile.d/00-aliases.sh
+   46  alias python='python3'
+   47  EOS
+   48  \)
+   49  sudo sh -c "printf alias python='python3' >> /etc/profile.d/00-aliases.sh"
+   50  cat /etc/profile.d/00-aliases.sh
+   51  sudo sh -c "printf 'alias python=\'python3\'' >> /etc/profile.d/00-aliases.sh"
+   52  sudo sh -c 'echo -e "alias python='python3'" >> /etc/profile.d/00-aliases.sh'
+   53  cat /etc/profile.d/00-aliases.sh
+   54  rm /etc/profile.d/00-aliases.sh
+   55  sudo rm /etc/profile.d/00-aliases.sh
+   56  sudo sh -c 'echo -e "alias python='python3'" >> /etc/profile.d/00-aliases.sh'
+   57  cat /etc/profile.d/00-aliases.sh
+   58  sudo rm /etc/profile.d/00-aliases.sh
+   59  sudo sh -c 'echo -e "alias python=\'python3\'" >> /etc/profile.d/00-aliases.sh'
+   60  sudo sh -c 'echo -e "alias python=python3" >> /etc/profile.d/00-aliases.sh'
+   61  cat /etc/profile.d/00-aliases.sh
+   62  sudo rm /etc/profile.d/00-aliases.sh
+   63  sudo sh -c 'echo -e "alias python=python3" >> /etc/profile.d/00-aliases.sh'
+   64  cat /etc/profile.d/00-aliases.sh
+   65  sudo rm /etc/profile.d/00-aliases.sh
+   66  sudo sh -c 'echo -e "alias python=\"python3\"" >> /etc/profile.d/00-aliases.sh'
+   67  cat /etc/profile.d/00-aliases.sh
+   68  sudo rm /etc/profile.d/00-aliases.sh
+   69  sudo sh -c 'echo "alias python=\"python3\"" >> /etc/profile.d/00-aliases.sh'
+   70  cat /etc/profile.d/00-aliases.sh
+   71  man echo
+   72  man alias
+   73  which alias
+   74  alias -h
+   75  alias --help
+   76  alias -p
+   77  vi cloud-cluster-setup/scripts/full_setup.sh 
+   78  vi cloud-cluster-setup/scripts/setup_swc2025.sh
+   79  cat /etc/profile.d/00-aliases.sh
+   80  python
+   81  history
+   82  history| less
+   83  sudo sh -c 'echo "alias python=\'python3\'" >> /etc/profile.d/00-aliases.sh'
+   84  cat /etc/profile.d/00-aliases.sh
+   85  sudo sed 's/"/\'/g' /etc/profile.d/00-aliases.sh
+   86  sudo sed "s/\"/'/g" /etc/profile.d/00-aliases.sh
+   87  sudo sed -i "s/\"/'/g" /etc/profile.d/00-aliases.sh
+   88  cat /etc/profile.d/00-aliases.sh
+   89  vi cloud-cluster-setup/scripts/setup_swc2025.sh
+   90  ls -ltr
+   91  less ansible.log 
+   92  vi cloud-cluster-setup/scripts/full_setup.sh 
+   93  man adduser
+   94  vi cloud-cluster-setup/scripts/add_users.sh 
+   95  sudo mkdir /vol/swc2025/home
+   96  man adduser
+   97  groups
+   98  groups ubuntu
+   99  sudo adduser --home /vol/swc2025/home/testuser testuser participants
+  100  man adduser
+  101  man useradd 
+  102  sudo useradd -d /vol/swc2025/home/testuser -G participants testuser 
+  103  sudo useradd -d /vol/swc2025/home/testuser testuser 
+  104  echo -e "testpw\ntestpw\n" | pass "
+  105  vi cloud-cluster-setup/scripts/add_users.sh 
+  106  echo -e "testpw\ntestpw\n" | passwd testuser
+  107  sudo \(echo -e "testpw\ntestpw\n" | passwd testuser\)
+  108  sudo sh -c 'echo -e "testpw\ntestpw\n" | passwd testuser'
+  109  vi cloud-cluster-setup/scripts/add_users.sh 
+  110  sudo sh -c 'echo -e "testpw\ntestpw\n"'
+  111  sudo sh -c 'echo "testpw\ntestpw\n"'
+  112  sudo sh -c 'echo "testpw\ntestpw\n" | passwd testuser'
+  113  su testuser
+  114  sudo mkdir /vol/swc2025/home/testuser
+  115  sudo chown testuser:testuser /vol/swc2025/home/testuser
+  116  ls -ld /vol/swc2025/home/testuser
+  117  su testuser
+  118  ls
+  119  ls -ltr
+  120  ls /opt/playbook/
+  121  cd /vol/swc2025/
+  122  ls
+  123  sudo mkdir course
+  124  ls -d course/
+  125  ls -ld course/
+  126  cd course/
+  127  cd ..
+  128  git clone https://github.com/cschu/swc2025_embl_course.git 
+  129  ls
+  130  rm -rf course/ swc2025_embl_course/
+  131  git clone https://github.com/cschu/swc2025_embl_course.git course
+  132  ls -ld course/
+  133  ls /vol/swc2025/home/testuser/
+  134  ln -s /vol/swc2025/course/bin /vol/swc2025/home/testuser/
+  135  sudo ln -s /vol/swc2025/course/bin /vol/swc2025/home/testuser/
+  136  sudo ln -s /vol/swc2025/course/data /vol/swc2025/home/testuser/
+  137  ls -l /vol/swc2025/home/testuser/
+  138  ls -l /vol/swc2025/home/testuser/bin
+  139  ls -l /vol/swc2025/home/testuser/bin/
+  140  su testuser
+  141  sudo rm -rf /vol/swc2025/home/testuser/*
+  142  sudo mkdir /vol/swc2025/home/testuser/swc20251
+  143  sudo ln -s /vol/swc2025/course/data /vol/swc2025/home/testuser/swc20251
+  144  sudo ln -s /vol/swc2025/course/bin /vol/swc2025/home/testuser/swc20251
+  145  sudo ln -s /vol/swc2025/course/bin /vol/swc2025/home/testuser/swc20251 
+  146  su testuser
+  147  cd -
+  148  cd 
+  149  ls -ltr
+  150  sudo /etc/ssh/sshd_config
+  151  sudo vi /etc/ssh/sshd_config
+  152  sudo service ssh restart
+  153  sudo vi /etc/ssh/sshd_config
+  154  sudo vi /etc/ssh/sshd_config.d/60-cloudimg-settings.conf 
+  155  sudo vi /etc/ssh/sshd_config
+  156  sudo vi /etc/ssh/sshd_config.d/60-cloudimg-settings.conf 
+  157  sudo service ssh restart
+  158  man adduser
+  159  sudo adduser --home /vol/swc2025/home/testuser2 testuser2
+  160  man adduser
+  161  echo "testpw\ntestpw\n" sudo adduser --home /vol/swc2025/home/testuser2 --gecos "" testuser2 "
+  162  man adduser
+  163  echo "testpw\ntestpw\n" | sudo adduser --home /vol/swc2025/home/testuser3 --gecos "" testuser3
+  164  users
+  165  sudo adduser --home /vol/swc2025/home/testuser3 --disabled-password --gecos "" testuser3
+  166  sudo adduser --home /vol/swc2025/home/testuser3 --disabled-password --gecos "" testuser4
+  167  sudo adduser --home /vol/swc2025/home/testuser5 --disabled-password --gecos "" testuser5
+  168  sudo sh -c 'echo "testpw\ntestpw\n" | passwd testuser5'
+  169  history
+  170  pwd
+  171  ls
+  172  vi cloud-cluster-setup/scripts/create_user2025.sh
+  173  sudo sh -c "pw=testpw2; echo '${pw}\n${pw}\n' | passwd testuser5"
+  174  vi cloud-cluster-setup/scripts/add_users.sh 
+  175  vi cloud-cluster-setup/scripts/create_user2025.sh
+  176  chmod 755 cloud-cluster-setup/scripts/create_user2025.sh
+  177  sudo cloud-cluster-setup/scripts/create_user2025.sh testuser6 testpw
+  178  vi cloud-cluster-setup/scripts/create_user2025.sh
+  179  sudo cloud-cluster-setup/scripts/create_user2025.sh testuser6 testpw
+  180  vi cloud-cluster-setup/scripts/create_user2025.sh
+  181  sudo cloud-cluster-setup/scripts/create_user2025.sh testuser6 testpw
+  182  vi cloud-cluster-setup/scripts/create_user2025.sh
+  183  sudo cloud-cluster-setup/scripts/create_user2025.sh testuser6 testpw
+  184  vi cloud-cluster-setup/scripts/create_user2025.sh
+  185  sudo cloud-cluster-setup/scripts/create_user2025.sh testuser6 testpw
+  186  vi cloud-cluster-setup/scripts/create_user2025.sh
+  187  sudo cloud-cluster-setup/scripts/create_user2025.sh testuser6 testpw
+  188  vi cloud-cluster-setup/scripts/create_user2025.sh
+  189  cd /vol/swc2025/
+  190  ls
+  191  cd course/
+  192  ls
+  193  cd -
+  194  cd 
+  195  vi cloud-cluster-setup/scripts/create_user2025.sh
+  196  sudo cloud-cluster-setup/scripts/create_user2025.sh testuser6 testpw
+  197  vi cloud-cluster-setup/scripts/create_user2025.sh
+  198  sudo cloud-cluster-setup/scripts/create_user2025.sh testuser6 testpw
+  199  ls /vol/swc2025/home/testuser6/
+  200  sudo ls /vol/swc2025/home/testuser6/
+  201  sudo ls /vol/swc2025/home/testuser6/swc
+  202  sudo chmod 755 /usr/local/bin/nextflow 
+  203  vi cloud-cluster-setup/scripts/setup_swc2025.sh
+  204  sudo chown testuser6:testuser6 /vol/swc2025/home/testuser6/swc
+  205  vi cloud-cluster-setup/scripts/create_user2025.sh
+  206  exit
+  207  history | less
+  208  vi cloud-cluster-setup/scripts/create_user2025.sh
+  209  docker -h
+  210  vi create_users.sh
+  211  vi cloud-cluster-setup/scripts/create_users2025.sh
+  212  bash cloud-cluster-setup/scripts/create_users2025.sh
+  213  vi cloud-cluster-setup/scripts/create_users2025.sh
+  214  bash cloud-cluster-setup/scripts/create_users2025.sh
+  215  vi cloud-cluster-setup/scripts/create_users2025.sh
+  216  bash cloud-cluster-setup/scripts/create_users2025.sh
+  217  vi cloud-cluster-setup/scripts/create_users2025.sh
+  218  bash cloud-cluster-setup/scripts/create_users2025.sh
+  219  vi cloud-cluster-setup/scripts/create_users2025.sh
+  220  bash cloud-cluster-setup/scripts/create_users2025.sh
+  221  vi cloud-cluster-setup/scripts/create_users2025.sh
+  222  bash cloud-cluster-setup/scripts/create_users2025.sh
+  223  vi cloud-cluster-setup/scripts/create_users2025.sh
+  224  bash cloud-cluster-setup/scripts/create_users2025.sh
+  225  vi cloud-cluster-setup/scripts/create_users2025.sh
+  226  bash cloud-cluster-setup/scripts/create_users2025.sh
+  227  vi cloud-cluster-setup/scripts/create_users2025.sh
+  228  mv cloud-cluster-setup/scripts/create_users2025.sh cloud-cluster-setup/scripts/create_username_and_password_2025.sh
+  229  cd cloud-cluster-setup/
+  230  git status
+  231  cd -
+  232  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  233  vi cloud-cluster-setup/scripts/add_users.sh 
+  234  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  235  vi cloud-cluster-setup/scripts/add_users.sh 
+  236   cloud-cluster-setup/scripts/create_users_2025.sh
+  237  bash cloud-cluster-setup/scripts/create_users_2025.sh
+  238  bash cloud-cluster-setup/scripts/create_username_and_password_2025.sh 
+  239  bash cloud-cluster-setup/scripts/create_username_and_password_2025.sh | cloud-cluster-setup/scripts/create_users_2025.sh -
+  240  chmod 755 cloud-cluster-setup/scripts/create_users_2025.sh
+  241  bash cloud-cluster-setup/scripts/create_username_and_password_2025.sh | cloud-cluster-setup/scripts/create_users_2025.sh -
+  242  vi cloud-cluster-setup/scripts/add_users.sh 
+  243  vi cloud-cluster-setup/scripts/create_username_and_password_2025.sh
+  244  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  245  bash cloud-cluster-setup/scripts/create_username_and_password_2025.sh | cloud-cluster-setup/scripts/create_users_2025.sh -
+  246  bash cloud-cluster-setup/scripts/create_username_and_password_2025.sh > user_pw.txt
+  247  bash cloud-cluster-setup/scripts/create_users_2025.sh user_pw.txt 
+  248  vi user_pw.txt 
+  249  ls -ltr
+  250  ls -ltra
+  251  rm .user_pw.txt.swp 
+  252  vi user_pw.txt 
+  253  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  254  bash cloud-cluster-setup/scripts/create_users_2025.sh user_pw.txt 
+  255  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  256  vi user_pw.txt 
+  257  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  258  bash cloud-cluster-setup/scripts/create_users_2025.sh user_pw.txt 
+  259  vi cloud-cluster-setup/scripts/create_user_2025.sh
+  260  mv cloud-cluster-setup/scripts/create_user2025.sh cloud-cluster-setup/scripts/create_user_2025.sh
+  261  vi cloud-cluster-setup/scripts/create_user_2025.sh
+  262  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  263  vi user_pw.txt 
+  264  bash cloud-cluster-setup/scripts/create_users_2025.sh user_pw.txt 
+  265  chmod 755 cloud-cluster-setup/scripts/create_users_2025.sh
+  266  vi user_pw.txt 
+  267  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  268  chmod 755 cloud-cluster-setup/scripts/create_users_2025.sh
+  269  sudo cloud-cluster-setup/scripts/create_users_2025.sh
+  270  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  271  vi cloud-cluster-setup/scripts/create_users_2025.sh user_pw.txt 
+  272  sudo cloud-cluster-setup/scripts/create_users_2025.sh user_pw.txt 
+  273  ls /vol/swc2025/home/swc20251_00/
+  274  sudo ls /vol/swc2025/home/swc20251_00/
+  275  sudo ls /vol/swc2025/home/swc20251_00/swc
+  276  vi user_pw.txt 
+  277  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  278  sudo cloud-cluster-setup/scripts/create_users_2025.sh user_pw.txt 
+  279  vi user_pw.txt 
+  280  sudo adduser ralves sudo
+  281  sudo adduser cschu sudo
+  282  ls
+  283  ls -ltr
+  284  vi user_pw.txt 
+  285  vi user_emails.txt
+  286  paste user_pw.txt user_emails.txt 
+  287  paste user_pw.txt user_emails.txt | cut -f 4
+  288  paste user_pw.txt user_emails.txt > user_pw.txt.2
+  289  vi user_pw.txt.2 
+  290  for e in $(cat user_emails.txt); do print "%s\t%s\n" "$e" "$(echo $e | sha256sum - | cut -f -8)"; done
+  291  for e in $(cat user_emails.txt); do pw=printf "%s\t%s\n" "$e" "$(echo $e | sha256sum - | cut -f -8)"; done
+  292  for e in $(cat user_emails.txt); do pw=$(echo $e | sha256sum - | cut -f -8); printf "%s\t%s\n" "$e" "$pw"; done
+  293  for e in $(cat user_emails.txt); do pw=$(echo $e | shasum256 | cut -f -8); printf "%s\t%s\n" "$e" "$pw"; done
+  294  for e in $(cat user_emails.txt); do pw=$(echo $e | sha256sum | cut -f -8); printf "%s\t%s\n" "$e" "$pw"; done
+  295  for e in $(cat user_emails.txt); do pw=$(echo $e | sha256sum | cut -f 1 -d " " | cut -f -8); printf "%s\t%s\n" "$e" "$pw"; done
+  296  for e in $(cat user_emails.txt); do pw=$(echo $e | sha256sum | cut -f 1 -d " " | cut -c -8); printf "%s\t%s\n" "$e" "$pw"; done
+  297  for e in $(cat user_emails.txt); do pw=$(echo $e | sha256sum | cut -f 1 -d " " | cut -c -8); printf "%s\t%s\n" "$e" "$pw"; done > user_emails.txt.2
+  298  paste user_pw.txt user_emails.txt.2 > user_pw.txt.2
+  299  vi user_pw.txt.2 
+  300  vi cloud-cluster-setup/scripts/add_users.sh 
+  301  vi user_pw.txt.2 
+  302  cut -f 2,5 user_pw.txt.2 
+  303  cut -f 2,5 user_pw.txt.2 | grep "^swc"
+  304  vi cloud-cluster-setup/scripts/change_pw.sh
+  305  vi cloud-cluster-setup/scripts/create_users_2025.sh 
+  306  head -n 1 user_pw.txt.2 >> cloud-cluster-setup/scripts/change_pw.sh 
+  307  vi cloud-cluster-setup/scripts/change_pw.sh
+  308  vi cloud-cluster-setup/scripts/create_users_2025.sh 
+  309  vi cloud-cluster-setup/scripts/change_pw.sh
+  310  head -n 1 user_pw.txt.2 
+  311  sudo passwd swc20251_01
+  312  vi user_pw.txt.2 
+  313  sudo bash cloud-cluster-setup/scripts/change_pw.sh user_pw.txt.2 
+  314  vi user_pw.txt.2 
+  315  vi cloud-cluster-setup/scripts/change_pw.sh
+  316  sudo bash cloud-cluster-setup/scripts/change_pw.sh user_pw.txt.2 
+  317  vi cloud-cluster-setup/scripts/change_pw.sh
+  318  ls
+  319  sudo apt install tree
+  320  ls
+  321  squeue
+  322  cd /vol/swc2025/
+  323  ls
+  324  cd course/
+  325  pwd
+  326  ls
+  327  git status
+  328  vi data/scripts/exercises/ex-01-1/word_count.nf 
+  329  tree data/scripts/exercises/
+  330  vi data/scripts/exercises/ex-02-1/answers/answers.txt 
+  331  vi data/scripts/exercises/ex-02-2/answers/answers.txt 
+  332  vi data/scripts/exercises/ex-02-2/answers/wc-params.nf 
+  333  vi data/scripts/exercises/ex-03-1/answers/channel.nf 
+  334  vi data/scripts/exercises/ex-03-2/answers/channel.nf 
+  335  vi data/scripts/exercises/ex-03-1/answers/channel.nf 
+  336  vi data/scripts/exercises/ex-03-2/answers/answers.txt 
+  337  vi data/scripts/exercises/ex-04-1/process_exercise_input.nf 
+  338  vi data/scripts/exercises/ex-04-1/answers/process_exercise_input.nf 
+  339  vi data/scripts/exercises/ex-04-2/answers/process_exercise_combine.nf 
+  340  vi data/scripts/exercises/ex-04-1/process_exercise_input.nf 
+  341  vi data/scripts/exercises/ex-04-2/answers/process_exercise_combine.nf 
+  342  vi data/scripts/exercises/ex-05-1/process_exercise_output.nf 
+  343  vi data/scripts/exercises/ex-03-1/answers/channel.nf 
+  344  vi data/scripts/exercises/ex-03-2/answers/channel.nf 
+  345  vi data/scripts/exercises/ex-04-1/process_exercise_input.nf
+  346  vi data/scripts/exercises/ex-06-1/map_operator.nf 
+  347  vi data/scripts/exercises/ex-06-1/answers/map_operator.nf 
+  348  vi data/scripts/exercises/ex-07-1/answers/inflammation.nf 
+  349  git status
+  350  git commit -am 'minor edits'
+  351  git config --global user.email "cschu1981@gmail.com"
+  352  git config --global user.name "Christian Schudoma"
+  353  git commit -am 'minor edits'
+  354  git push origin main
+  355  ls
+  356  cd 
+  357  ls 
+  358  history | less
+  359  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  360  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  361  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  362  ls
+  363  history | less
+  364  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  365  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  366  sudo vi /vol/swc2025/course/bin/calc_stats.py 
+  367  history | grep -m 10 alias
+  368  sudo vi /etc/profile.d/00-aliases.sh
+  369  sudo apt install python-is-python3
+  370  python
+  371  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  372  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  373  sudo vi /vol/swc2025/course/bin/calc_stats.py 
+  374  squeue
+  375  cd /vol/swc2025/course/
+  376  git mv data/scripts/exercises/ex-02-2/answers/wc-params.nf data/scripts/exercises/ex-02-2/answers/wc_params.nf
+  377  git status
+  378  vi test.nf
+  379  nextflow run test.nf
+  380  vi test.nf
+  381  nextflow run test.nf
+  382  vi test.nf
+  383  nextflow run test.nf
+  384  vi test.nf
+  385  nextflow run test.nf
+  386  vi test.nf
+  387  nextflow run test.nf
+  388  squeue
+  389  watch squeue
+  390  sudo apt install ffmpeg
+  391  ffmpeg -h
+  392  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  393  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  394  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  395  ls 
+  396  ls -ltr
+  397  tail user_pw.txt.2
+  398  sudo adduser heriche sudo
+  399  sudo deluser heriche sudo
+  400  groups heriche
+  401  vi /vol/swc2025/course/data/scripts/exercises/ex-01-1/word_count.nf 
+  402  nano /vol/swc2025/course/data/scripts/exercises/ex-01-1/word_count.nf 
+  403  cp /vol/swc2025/course/data/scripts/exercises/ex-01-1/word_count.nf .
+  404  nano word_count.nf 
+  405  squeue
+  406  pwd
+  407  tree /vol/swc2025/course/data/scripts/exercises/
+  408  nano word_count.nf 
+  409  nextflow run word_count.nf 
+  410  ls
+  411  nextflow run word_count.nf 
+  412  nano word_count.nf 
+  413  nextflow run word_count.nf 
+  414  nano word_count.nf 
+  415  sudo ls -a /vol/swc2025/users
+  416  sudo ls -a /vol/swc2025/home/
+  417  sudo ls -a /vol/swc2025/home/swc20251_00
+  418  sudo ls -a /vol/swc2025/home/swc20251_00/.nextflow
+  419  sudo ls -a /vol/swc2025/home/swc20251_00
+  420  sudo ls -a /vol/swc2025/home/swc20251_00/.nextflow
+  421  ls
+  422  pwd
+  423  sudo su swc20251_00
+  424  ls
+  425  do00swc_s?*
+  426  for u in $(ls /vol/swc2025/home/ | grep swc20251); do echo $u; done
+  427  for u in $(ls /vol/swc2025/home/ | grep swc20251); do echo $u; cp -v /vol/swc2025/home/swc20251_00/.nextflow/config /vol/swc2025/home/$u/.nextflow/
+  428  for u in $(ls /vol/swc2025/home/ | grep swc20251); do echo $u; sudo cp -v /vol/swc2025/home/swc20251_00/.nextflow/config /vol/swc2025/home/$u/.nextflow/;  sudo chown $u:$u /vol/swc2025/home/$u/.nextflow/config
+  429  ls -l /vol/swc2025/home/swc20251_00/.nextflow/config
+  430  sudo ls -l /vol/swc2025/home/swc20251_00/.nextflow/config
+  431  for u in $(ls /vol/swc2025/home/ | grep swc20251); do echo $u; sudo cp -v /vol/swc2025/home/swc20251_00/.nextflow/config /vol/swc2025/home/$u/.nextflow/;  sudo chown $u:$u /vol/swc2025/home/$u/.nextflow/config; done
+  432  ls -a /vol/swc2025/home/swc20251_29/
+  433  sudo ls -a /vol/swc2025/home/swc20251_29/
+  434  sudo less /vol/swc2025/home/swc20251_29/.bashrc
+  435  ls
+  436  vi cloud-cluster-setup/scripts/create_user_2025.sh 
+  437  for u in $(ls /vol/swc2025/home/ | grep swc20251); do echo $u; sudo mkdir /vol/swc2025/home/$u/.nextflow; sudo cp -v /vol/swc2025/home/swc20251_00/.nextflow/config /vol/swc2025/home/$u/.nextflow/; sudo chown $u:$u /vol/swc2025/home/$u/.nextflow/config ; 
+  438  man chown
+  439  for u in $(ls /vol/swc2025/home/ | grep swc20251); do echo $u; sudo mkdir /vol/swc2025/home/$u/.nextflow; sudo cp -v /vol/swc2025/home/swc20251_00/.nextflow/config /vol/swc2025/home/$u/.nextflow/; sudo chown -R $u:$u /vol/swc2025/home/$u/.nextflow; done
+  440  sudo su swc20251_16
+  441  nextflow 
+  442  sudo su swc20251_16
+  443  sudo less /vol/swc2025/home/swc20251_16/.bash_history
+  444  sudo su swc20251_16
+  445  sudo less  /vol/swc2025/home/swc20251_16/.bash_history
+  446  ls /vol/swc2025/home/
+  447  cd /vol/swc2025/course/data/
+  448  l
+  449  wget https://swcarpentry.github.io/python-novice-inflammation/files/code/python-novice-inflammation-code.zip
+  450  unzip 
+  451  unzip python-novice-inflammation-code.zip 
+  452  l
+  453  ls
+  454  rm python-novice-inflammation-code.zip 
+  455  ls -l
+  456  ln -s inflammation/ data
+  457  l
+  458  ls -l
+  459  chmod o-w -R .
+  460  ls -la
+  461  chmod o-w -R .
+  462  l
+  463  ls -l
+  464  ls -ltr
+  465  cat helper_pw.txt
+  466  cat user_pw.txt.2 
+  467  cat user_pw.txt.2 | cut -f 1-4
+  468  exit
+  469  sudo groupadd docker
+  470  sudo gpasswd -a heriche docker
+  471  sudo su heriche
+  472  ls /vol/swc2025/home/|  grep swc
+  473  for u in $(ls /vol/swc2025/home/); do  sudo gpasswd -a $u docker; done
+  474  sudo su swc20251_00
+  475  sudo systemctl restart docker
+  476  sudo ls -l /var/run/docker.sock
+  477  sudo chmod a+x /var/run/docker.sock
+  478  sudo ls -l /var/run/docker.sock
+  479  sudo systemctl restart docker
+  480  ls -ltr
+  481  cat user_pw.txt.2
+  482  ls -ltr
+  483  vi cloud-cluster-setup/scripts/create_users_2025.sh 
+  484  vi cloud-cluster-setup/scripts/create_user_2025.sh 
+  485  history > history.20250129
+  486  less history.20250129 
+  487  vi cloud-cluster-setup/scripts/create_user_2025.sh 
+  488  vi history.20250129 
+  489  sudo vi /etc/profile.d/00-aliases.sh
+  490  vi history.20250129 
+  491  vi cloud-cluster-setup/scripts/change_pw.sh
+  492  vi history.20250129 
+  493  ls -ltr cloud-cluster-setup/scripts/
+  494  vi cloud-cluster-setup/scripts/create_user_2025.sh 
+  495  history | less
+  496  cat user_pw.txt.2
+  497  history | less
+  498  history | grep bash | less
+  499  vi cloud-cluster-setup/scripts/change_pw.sh
+  500  history | grep bash | less
+  501  vi cloud-cluster-setup/scripts/create_users_2025.sh
+  502  vi history.20250129 
+  503  vi cloud-cluster-setup/scripts/create_user_2025.sh
+  504  vi history.20250129 
+  505  vi cloud-cluster-setup/scripts/create_user_2025.sh
+  506  ls -ltr cloud-cluster-setup/scripts/
+  507  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  508  vi history.20250129 
+  509  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  510  vi history.20250129 
+  511  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  512  vi history.20250129 
+  513  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  514  vi history.20250129 
+  515  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  516  vi history.20250129 
+  517  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  518  vi cloud-cluster-setup/scripts/create_user_2025.sh
+  519  sudo cp /vol/swc2025/home/swc20251_00/.nextflow/config cloud-cluster-setup/data/nextflow.config
+  520  ls -l cloud-cluster-setup/data/nextflow.config
+  521  chmod 755 cloud-cluster-setup/data/nextflow.config
+  522  sudo chmod 755 cloud-cluster-setup/data/nextflow.config
+  523  vi cloud-cluster-setup/scripts/create_user_2025.sh
+  524  vi history.20250129 
+  525  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  526  vi cloud-cluster-setup/scripts/create_user_2025.sh
+  527  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  528  vi cloud-cluster-setup/scripts/create_user_2025.sh
+  529  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  530  vi history.20250129 
+  531  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  532  vi history.20250129 
+  533  vi cloud-cluster-setup/scripts/setup_swc2025.sh 
+  534  vi history.20250129 
+  535  rm history.20250129 
+  536  history | grep bash
+  537  vi user_pw.txt
+  538  vi cloud-cluster-setup/scripts/create_users_2025.sh 
+  539  ls -ltr
+  540  head user_*
+  541  less user_pw.txt
+  542  vi helper_pw.txt
+  543  head cloud-cluster-setup/scripts/create_users_2025.sh 
+  544  sudo cloud-cluster-setup/scripts/create_users_2025.sh helper_pw.txt 
+  545  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  546  sudo -i visudo
+  547  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  548  sudo -i visudo
+  549  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  550  sudo -i visudo
+  551  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  552  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  553  ls
+  554  tail user_pw.txt.2
+  555  cd cloud-cluster-setup/
+  556  ls
+  557  git status
+  558  git add -A 
+  559  git commit -m '2025 scripts'
+  560  git push origin swc2025
+  561  exit
+  562  tree /vol/swc2025/course/data/scripts/exercises/
+  563  cp -v /vol/swc2025/course/data/scripts/exercises/ /vol/swc2025/course/data/scripts/.solutions
+  564  cp -rv /vol/swc2025/course/data/scripts/exercises/ /vol/swc2025/course/data/scripts/.solutions
+  565  ls /vol/swc2025/course/data/scripts/
+  566  ls /vol/swc2025/course/data/scripts/exercises/
+  567  tree /vol/swc2025/course/data/scripts/exercises/
+  568  rm -rf /vol/swc2025/course/data/scripts/exercises/ex-02-1
+  569  rm -rf /vol/swc2025/course/data/scripts/exercises/ex-02-2
+  570  rm -rf /vol/swc2025/course/data/scripts/exercises/ex-03-*
+  571  rm -rf /vol/swc2025/course/data/scripts/exercises/ex-04-1/answers/
+  572  rm -rf /vol/swc2025/course/data/scripts/exercises/ex-04-2
+  573  rm -rf /vol/swc2025/course/data/scripts/exercises/ex-05-1/answers/
+  574  rm -rf /vol/swc2025/course/data/scripts/exercises/ex-06-1/answers/
+  575  tree /vol/swc2025/course/data/scripts/exercises/
+  576  vi /vol/swc2025/course/data/scripts/exercises/ex-04-1/process_exercise_input.nf 
+  577  vi /vol/swc2025/course/data/scripts/exercises/ex-05-1/process_exercise_output.nf 
+  578  sinfo
+  579  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  580  sudo -o
+  581  sudo -
+  582  sudo -i
+  583  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  584  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  585  sinfo
+  586  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  587  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  588  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  589  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  590  su -
+  591  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  592  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  593  cd ..
+  594  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  595  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  596  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  597  cd /vol/
+  598  l
+  599  cd s
+  600  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  601  ssh bibigrid-worker-qj77dbfskz3knpk-1
+  602  cat /etc/exports 
+  603  ls /vol/swc2025/home/swc20251_00/.nextflow
+  604  sudo ls /vol/swc2025/home/swc20251_00/.nextflow
+  605  squeue
+  606  ls /vol/swc2025/home/swc20251_04/swc
+  607  ls /vol/swc2025/home/swc20251_04/swc/data/yeast/
+  608  squeue
+  609  squeue --format user
+  610  squeue --format "%u"
+  611  ls
+  612  less user_pw.txt.2
+  613  squeue --format "%u"
+  614  squeue
+  615  watch squeue
+  616  man squeue
+  617  watch squeue -l
+  618  man squeue
+  619  watch squeue --format "%.18i %.9P %.8j %.15u %.2t %.10M %.6D %R"
+  620  watch squeue --format "%.18i %.8j %.15u %.2t %.10M %.6D %R"
+  621  man squeue
+  622  squeue --format "%.18i %.8j %.15u %.2t %.10M %.6D %R"
+  623  man squeue
+  624  squeue --format "%.18i %.8j %.15u %.2t %.10M %.6D %R"
+  625  watch squeue
+  626  htop
+  627  watch squeue
+  628  htop
+  629  ssh bibigrid-worker-qj77dbfskz3knpk-0
+  630  watch squeue
+  631  sbatch --mem 8G -x bibigrid-master-qj77dbfskz3knpk,bibigrid-worker-qj77dbfskz3knpk-0 --wrap "echo BLAAAAH"
+  632  ssh bibigrid-worker-qj77dbfskz3knpk-1
